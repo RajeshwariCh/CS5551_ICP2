@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .button{
+        background-color: #FF5733;
+    }
+    .italic {
+        font-style: italic;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Backend.js"></script>
+</head>
+<body style="background-color:#ffffcc;">
+
+<h1 class="italic" align="center">Enter the Country Code</h1>
+</br>
+<div ng-app="weather" ng-controller="weatherctrl" >
+
+    <form align="center">
+
+       Country Code: <input ng-model="Ccode" placeholder="Country code..">
+        </br>
+        </br>
+        Country Name: <input ng-model="Cname" placeholder="Country name..">
+        </br>
+        </br>
+        <button class="button" id="btn" ng-click="getWeather()"> Show Weather </button>
+        <br>
+        <br>
+        <div >
+
+            <table style="width:50%" align="center">
+                <tr>
+                    <th class="italic"><h3>Temperature</h3></th>
+                    <th class="italic"><h3>Weather</h3></th>
+
+                </tr>
+                <tr>
+                    <th> {{cw1}}</th>
+                    <th><img src={{Image1}}></th>
+                </tr>
+                <tr>
+                    <th> {{cw2}}</th>
+                    <th><img src={{Image2}}></th>
+                </tr>
+                <tr>
+                    <th> {{cw3}}</th>
+                    <th><img src={{Image3}}></th>
+                </tr>
+                <tr>
+                    <th> {{cw4}}</th>
+                    <th><img src={{Image4}}></th>
+                </tr>
+                <tr>
+                    <th> {{cw5}}</th>
+                    <th><img src={{Image5}}></th>
+                </tr>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
